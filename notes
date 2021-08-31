@@ -1,0 +1,25 @@
+2021 Aug 28
+- Following Andy's BIDS/fmriprep tutorial:
+https://andysbrainbook.readthedocs.io/en/latest/OpenScience/OS/BIDS_Overview.html
+
+- cmake and pip are already installed (from official repos)
+
+- Installed dcm2niix from AUR
+- Installed dcm2bis:
+ pip install --user --upgrade dcm2bids
+
+ - Installed pigz from community repo
+ - Installed pydeface
+ pip install pydeface --user
+ (Note: use default destination to save defaced brains as new files rather than overwriting existing niftis)
+
+- Installing mriqc
+docker run -it poldracklab/mriqc:latest --version
+
+- Installing fmriprep
+pip install --user --upgrade fmriprep-docker
+
+- Installing TemplateFlow
+pip install templateflow --target $HOME/fmri
+
+- Ran fmriprep-docker --help, which prompted me to install nipreps/fmriprep:20.2.3, which I did
